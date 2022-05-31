@@ -26,3 +26,16 @@ Route::get('/blog/detail/{id}', 'App\Http\Controllers\BlogController@detail');
 Route::get('/cart', 'App\Http\Controllers\CartController@cart');
 Route::get('/checkout', 'App\Http\Controllers\CheckoutController@checkout');
 
+Route::get('/login', function(){
+    return view('auth.login');
+});
+Route::get('/register', function(){
+    return view('auth.register');
+});
+Route::get('/dashboard', function(){
+    return view('dashboard');
+});
+
+// Route::middleware('auth')->group(function(){
+
+// });
